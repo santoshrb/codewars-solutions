@@ -25,11 +25,21 @@
 require 'spec_helper'
 require 'byebug'
 
-def parts_sums(ls)
-  max_length = ls.length
-  (0..(max_length-1)).map do |l|
-    (ls[l..-1]).sum
-  end.push(0)
+# def parts_sums(ls)
+#   max_length = ls.length
+#   (0..(max_length-1)).map do |l|
+#     (ls[l..-1]).sum
+#   end.push(0)
+# end
+
+def part_sums(ls)
+  array_of_sum = ls.sum
+  return_sums = [array_of_sum]
+  ls.each do |val|
+    array_of_sum -= val
+    return_sums << sum
+  end
+  sums
 end
 
 # Sample Tests RSpec:
